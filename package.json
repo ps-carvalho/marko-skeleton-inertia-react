@@ -1,0 +1,22 @@
+{
+  "name": "marko-skeleton-inertia-react",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:ssr": "vite build --ssr app/web/resources/js/ssr.jsx --outDir bootstrap/ssr",
+    "dev:all": "npm run build:ssr && concurrently -k \"php -S 0.0.0.0:8000 -t public/\" \"npx vite --host\" \"node bootstrap/ssr/ssr.js\" --names \"PHP,VITE,SSR\" --prefix-colors \"blue,green,yellow\""
+  },
+  "dependencies": {
+    "@inertiajs/react": "^3.0.3",
+    "@tailwindcss/vite": "^4.2.2",
+    "@vitejs/plugin-react": "^5.2.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "vite": "^6.0"
+  }
+}
