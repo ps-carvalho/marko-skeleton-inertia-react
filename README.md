@@ -57,7 +57,7 @@ vendor/bin/pest       # PHP tests
 
 ## Composer Packages
 
-This skeleton resolves the Marko Inertia/Vite PHP packages from the GitHub monorepo at `https://github.com/ps-carvalho/marko-packages`. The root app requires `marko/packages`, which replaces the individual package names for Composer, while the app module still declares the React adapter dependency as `marko/inertia-react`.
+This skeleton resolves the Marko PHP packages from the standalone GitHub repositories for `marko/vite`, `marko/inertia`, and `marko/inertia-react`. The root app declares those VCS repositories directly and requires the React adapter package, which pulls in the core Inertia and Vite packages transitively.
 
 SSR is available but disabled by default through `.env.example`:
 
